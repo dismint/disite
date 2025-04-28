@@ -1,0 +1,15 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+    {% include "partials/top.html" %}
+    <div class="blogs-container">
+        <article>
+            <h1 class="blog-title">{{ title }}</h1>
+            <div class="blog-info">
+                <p>{{ date | readableDate }}</p>
+                <p>•</p>
+                <p>{{ length }}</p>
+            </div>
+            {{ content | safe }}
+        </article>
+    </div>
+{% endblock %}

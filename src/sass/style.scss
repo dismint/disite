@@ -1,0 +1,169 @@
+@use "typed";
+
+$text: #c5c9c5;
+$primary: #9fb5c9;
+$background: #181616;
+
+@font-face {
+  font-family: "Monaspace Neon";
+  src: url("/fonts/MonaspaceNeon-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Monaspace Argon";
+  src: url("/fonts/MonaspaceArgon-Medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-feature-settings: "calt" off;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+main {
+  height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  box-sizing: border-box;
+  max-width: min(800px, 75%);
+  line-height: 1.4;
+  font-family: "Source Serif 4";
+  font-size: 16px;
+  color: $text;
+  background-color: $background;
+}
+
+h1 {
+  font-size: 2.0em;
+}
+h1.blog-title {
+  color: $primary;
+}
+h1.blog-header {
+  font-family: "Monaspace Argon";
+  margin-bottom: 0.1em;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+p {
+  margin: 0.5em 0;
+}
+p.blog-name {
+}
+p.blog-date {
+}
+
+ul.file-list {
+    list-style-type: none;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+}
+a.top-title {
+  line-height: 1.2;
+  margin-top: 0.5em;
+  font-size: 3em;
+  font-family: "Monaspace Neon";
+  color: $text;
+}
+a {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0.1em;
+    background: $primary;
+    transition: width 0.3s ease;
+  }
+  &:hover::after {
+    width: 100%;
+  }
+}
+a svg {
+  display: block;
+  vertical-align: middle;
+  color: $text;
+}
+
+.main-title {
+  line-height: 1.2;
+  margin: 0.2em 0;
+  font-size: 3em;
+  font-family: "Monaspace Neon";
+  @include typed.typed(
+    "dismint",
+    0.5,
+    (
+      iterations: 0,
+    )
+  );
+}
+
+.main-navbar {
+  display: flex;
+  flex-direction: row;
+  margin: 0.25em 0;
+  gap: 0.5em;
+  .main-navbar-item {
+    font-size: 0.75em;
+    font-family: "Monaspace Argon";
+  }
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.main-splash {
+  margin: 1em 0;
+}
+
+.main-links {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75em;
+}
+
+.blogs-container {
+  margin: 3em 0;
+}
+
+.blog-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.blog-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
