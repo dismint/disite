@@ -4,7 +4,6 @@ tags: blog
 date: 2025-04-28
 length: 1 minute
 title: Printing in Zig
-
 ---
 
 Much like me, you might one day find yourself with a sudden desire to print something in Zig. This can be a daunting task to think about, but I'll show you how to do it!
