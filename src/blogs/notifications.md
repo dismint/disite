@@ -2,7 +2,7 @@
 layout: 'layouts/blog.html'
 tags: blog
 date: 2025-07-30
-length: 4 Minutes
+length: 4 minutes
 title: Taskbars Suck
 ---
 
