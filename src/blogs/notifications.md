@@ -2,7 +2,7 @@
 layout: 'layouts/blog.html'
 tags: blog
 date: 2025-05-08
-length: 4 Minute
+length: 4 Minutes
 title: Taskbars Suck
 ---
 
@@ -44,4 +44,4 @@ Thus we arrive at the current day. No status bar. Just notifications. And in fac
 
 {% img "/imgs/notifications_newnotif.gif", "new notification gif", 35 %}
 
-fin.
+Surprisingly, that's it. No reflection or further thoughts - this setup works really well for me and until I find something else to hate I'm in a happy place :)
